@@ -1,0 +1,117 @@
+body {
+    background: none !important;
+    color: white;
+}
+
+
+.signup{
+    display: flex;
+}
+@media(max-width:1070px) {
+    .signup {
+        align-items: center;
+        justify-content: center;
+        background-color: #0F123B;
+        width: 100vw;
+    }
+}
+
+.signup-navbar {
+    position: absolute;
+    font-size: 10px;
+    width: 100%;
+    top: 24px;
+    .navbar{
+        padding: 24px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media(max-width:992px) {
+    .signup-navbar{
+        top: 10px;
+    }
+    .signup-navbar .navbar{
+        background-color: transparent;
+        backdrop-filter: blur(0) !important;
+        .header{
+            background-color: #080a2896;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            padding: 15px
+        }
+    }
+    .navbar-collapse{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-nav{
+        width: 90%;
+        background-color: #080a2896;
+        margin: 0 !important;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .navbar-toggler{
+        background-color: wheat !important;
+    }
+}
+
+
+.signup .banner{
+    background: url('/bgsignup.png') !important;
+    background-size: cover !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh !important;
+    flex-grow: 1;
+}
+
+@media(max-width:1070px) {
+    .signup .banner{
+        display: none;
+    }
+}
+
+.signup .inputs {
+    background-color: #0F123B;
+    flex-grow: 1;
+    padding-left:103px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media(max-width:1070px) {
+    .signup .inputs {
+        justify-content: center;
+        background-color: transparent;
+        padding: 0;
+    }
+} 
+
+.css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root{
+    color: gray !important;
+    font-size: 13px !important;
+    top: -5px !important;
+}
+
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root{
+    border-radius: 14px !important;
+    border-left:3px solid gray ;
+    border-right:3px solid gray ;
+    border-top:1px solid gray ;
+    border-bottom:1px solid gray ;
+    height: 40px !important;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root {
+    color: white !important;
+}

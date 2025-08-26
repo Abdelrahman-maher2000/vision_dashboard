@@ -3,8 +3,6 @@
 import { Button, Switch, TextField } from "@mui/material";
 import Link from "next/link";
 
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 // icons
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import PersonIcon from "@mui/icons-material/Person";
@@ -15,8 +13,12 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useVars } from "../store";
+import { useEffect } from "react";
 
 export default function SignUp() {
+    useEffect(() => {
+        import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }, []);
     const setActive = useVars((state) => {
         return state.setActive;
     });

@@ -15,11 +15,14 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useVars } from "../store";
+import { useEffect } from "react";
 
 export default function SignUp() {
-    const setActive = useVars((state) => {
-        return state.setActive;
-    });
+    useEffect(() => {
+        const setActive = useVars((state) => {
+            return state.setActive;
+        });
+    }, []);
     const label = { inputProps: { "aria-label": "Switch demo" } };
     return (
         <>

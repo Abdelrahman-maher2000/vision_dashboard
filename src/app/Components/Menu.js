@@ -16,17 +16,17 @@ import Link from "next/link";
 export default function Menu({ Class }) {
     useEffect(() => {
         setActive(window.localStorage.getItem("Active"));
+        let active = useVars((state) => {
+            return state.active;
+        });
+        let setActive = useVars((state) => {
+            return state.setActive;
+        });
+        const setOpen = useVars((state) => {
+            return state.setOpen;
+        });
     }, []);
 
-    let active = useVars((state) => {
-        return state.active;
-    });
-    let setActive = useVars((state) => {
-        return state.setActive;
-    });
-    const setOpen = useVars((state) => {
-        return state.setOpen;
-    });
     return (
         <>
             <div className={Class}>

@@ -24,8 +24,8 @@ export default function SignUp() {
     return (
         <>
             <div className="signup-navbar">
-                <nav class="navbar navbar-expand-lg w-75 m-auto">
-                    <div class="container-fluid">
+                <nav className="navbar navbar-expand-lg w-75 m-auto">
+                    <div className="container-fluid">
                         <div className="header">
                             <p
                                 style={{
@@ -51,8 +51,8 @@ export default function SignUp() {
                             class="collapse navbar-collapse"
                             id="navbarNav"
                         >
-                            <ul class="navbar-nav ms-auto gap-5">
-                                <li class="nav-item">
+                            <ul className="navbar-nav ms-auto gap-5">
+                                <li className="nav-item">
                                     <Link
                                         href={"/home"}
                                         style={{
@@ -80,7 +80,7 @@ export default function SignUp() {
                                         </div>
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/home/Profile"}
                                         style={{
@@ -108,7 +108,7 @@ export default function SignUp() {
                                         </div>
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/SignUp"}
                                         style={{
@@ -137,7 +137,7 @@ export default function SignUp() {
                                     </Link>
                                 </li>
 
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/SignIn"}
                                         style={{

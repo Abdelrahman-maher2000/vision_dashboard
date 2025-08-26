@@ -22,8 +22,8 @@ export default function SignIn() {
     return (
         <>
             <div className="signin-navbar">
-                <nav class="navbar navbar-expand-lg w-75 m-auto">
-                    <div class="container-fluid">
+                <nav className="navbar navbar-expand-lg w-75 m-auto">
+                    <div className="container-fluid">
                         <div className="header">
                             <p
                                 style={{
@@ -49,8 +49,8 @@ export default function SignIn() {
                             class="collapse navbar-collapse"
                             id="navbarNav"
                         >
-                            <ul class="navbar-nav ms-auto gap-5">
-                                <li class="nav-item">
+                            <ul className="navbar-nav ms-auto gap-5">
+                                <li className="nav-item">
                                     <Link
                                         href={"/home"}
                                         style={{
@@ -59,10 +59,15 @@ export default function SignIn() {
                                         }}
                                         onClick={() => {
                                             setActive("dashboard");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "dashboard"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "dashboard"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -73,7 +78,7 @@ export default function SignIn() {
                                         </div>
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/home/Profile"}
                                         style={{
@@ -82,10 +87,15 @@ export default function SignIn() {
                                         }}
                                         onClick={() => {
                                             setActive("Profile");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "Profile"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "Profile"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -96,7 +106,7 @@ export default function SignIn() {
                                         </div>
                                     </Link>
                                 </li>
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/SignUp"}
                                         style={{
@@ -105,10 +115,15 @@ export default function SignIn() {
                                         }}
                                         onClick={() => {
                                             setActive("signup");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "signup"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "signup"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -120,7 +135,7 @@ export default function SignIn() {
                                     </Link>
                                 </li>
 
-                                <li class="nav-item">
+                                <li className="nav-item">
                                     <Link
                                         href={"/SignIn"}
                                         style={{
@@ -129,10 +144,15 @@ export default function SignIn() {
                                         }}
                                         onClick={() => {
                                             setActive("signin");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "signin"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "signin"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">

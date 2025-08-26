@@ -15,11 +15,9 @@ import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useEffect } from "react";
 
 export default function SignIn() {
-    useEffect(() => {
-        const setActive = useVars((state) => {
-            return state.setActive;
-        });
-    }, []);
+    const setActive = useVars((state) => {
+        return state.setActive;
+    });
     const label = { inputProps: { "aria-label": "Switch demo" } };
     return (
         <>

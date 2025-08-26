@@ -16,16 +16,16 @@ import Link from "next/link";
 export default function Menu({ Class }) {
     useEffect(() => {
         setActive(window.localStorage.getItem("Active"));
-        let active = useVars((state) => {
-            return state.active;
-        });
-        let setActive = useVars((state) => {
-            return state.setActive;
-        });
-        const setOpen = useVars((state) => {
-            return state.setOpen;
-        });
     }, []);
+    let active = useVars((state) => {
+        return state.active;
+    });
+    let setActive = useVars((state) => {
+        return state.setActive;
+    });
+    const setOpen = useVars((state) => {
+        return state.setOpen;
+    });
 
     return (
         <>
@@ -57,10 +57,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("dashboard");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "dashboard"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "dashboard"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">
@@ -90,10 +92,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("tables");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "tables"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "tables"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">
@@ -124,10 +128,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("billings");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "billings"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "billings"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">
@@ -167,10 +173,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("Profile");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "Profile"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "Profile"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">
@@ -201,10 +209,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("signin");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "signin"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "signin"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">
@@ -235,10 +245,12 @@ export default function Menu({ Class }) {
                         onClick={() => {
                             setActive("signup");
                             setOpen(false);
-                            window.localStorage.setItem(
-                                "Active",
-                                "signup"
-                            );
+                            if (typeof window !== "undefined") {
+                                window.localStorage.setItem(
+                                    "Active",
+                                    "signup"
+                                );
+                            }
                         }}
                     >
                         <div className="icon d-flex align-items-center justify-content-center">

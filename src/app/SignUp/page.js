@@ -15,14 +15,11 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useVars } from "../store";
-import { useEffect } from "react";
 
 export default function SignUp() {
-    useEffect(() => {
-        const setActive = useVars((state) => {
-            return state.setActive;
-        });
-    }, []);
+    const setActive = useVars((state) => {
+        return state.setActive;
+    });
     const label = { inputProps: { "aria-label": "Switch demo" } };
     return (
         <>
@@ -64,10 +61,15 @@ export default function SignUp() {
                                         }}
                                         onClick={() => {
                                             setActive("dashboard");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "dashboard"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "dashboard"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -87,10 +89,15 @@ export default function SignUp() {
                                         }}
                                         onClick={() => {
                                             setActive("Profile");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "Profile"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "Profile"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -110,10 +117,15 @@ export default function SignUp() {
                                         }}
                                         onClick={() => {
                                             setActive("signup");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "signup"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "signup"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">
@@ -134,10 +146,15 @@ export default function SignUp() {
                                         }}
                                         onClick={() => {
                                             setActive("signin");
-                                            window.localStorage.setItem(
-                                                "Active",
-                                                "signin"
-                                            );
+                                            if (
+                                                typeof window !==
+                                                "undefined"
+                                            ) {
+                                                window.localStorage.setItem(
+                                                    "Active",
+                                                    "signin"
+                                                );
+                                            }
                                         }}
                                     >
                                         <div className="d-flex align-items-center gap-1">

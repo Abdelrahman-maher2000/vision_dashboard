@@ -16,9 +16,6 @@ import { useVars } from "../store";
 import { useEffect } from "react";
 
 export default function SignUp() {
-    useEffect(() => {
-        import("bootstrap/dist/js/bootstrap.bundle.min.js");
-    }, []);
     const setActive = useVars((state) => {
         return state.setActive;
     });

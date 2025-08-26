@@ -13,9 +13,6 @@ import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useEffect } from "react";
 
 export default function SignIn() {
-    useEffect(() => {
-        import("bootstrap/dist/js/bootstrap.bundle.min.js");
-    }, []);
     const setActive = useVars((state) => {
         return state.setActive;
     });

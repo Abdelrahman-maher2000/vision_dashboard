@@ -19,7 +19,11 @@ export default function ({ children }) {
     return (
         <>
             <div
-                style={{ padding: "10px", display: "flex" }}
+                style={{
+                    padding: "10px",
+                    display: "flex",
+                    width: "100vw",
+                }}
                 className="main"
             >
                 <Drawer
